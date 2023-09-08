@@ -6,7 +6,6 @@ import javax.swing.JOptionPane;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author ygonz
@@ -59,6 +58,11 @@ public class calculadora_IU extends javax.swing.JFrame {
         });
 
         btnMultiplicar.setText("MULTIPLICAR");
+        btnMultiplicar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMultiplicarActionPerformed(evt);
+            }
+        });
 
         btnDividir.setText("DIVIDIR");
 
@@ -113,22 +117,32 @@ public class calculadora_IU extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSumarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSumarActionPerformed
-       double nro1 =Double.parseDouble(txtNro1.getText());
-       double nro2 =Double.parseDouble(txtNro2.getText());
-       
-       double suma =nro1+nro2;
-       
-        JOptionPane.showMessageDialog(null, "La suma de los numeros es :"+suma);
+        double nro1 = Double.parseDouble(txtNro1.getText());
+        double nro2 = Double.parseDouble(txtNro2.getText());
+
+        double suma = nro1 + nro2;
+
+        JOptionPane.showMessageDialog(null, "La suma de los numeros es :" + suma);
     }//GEN-LAST:event_btnSumarActionPerformed
 
     private void btnRestarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRestarActionPerformed
-        double nro1 =Double.parseDouble(txtNro1.getText());
+        double nro1 = Double.parseDouble(txtNro1.getText());
         double nro2 = Double.parseDouble(txtNro2.getText());
 
         double resta = nro1 - nro2;
 
         JOptionPane.showMessageDialog(null, "La resta de los numeros es :" + resta);
     }//GEN-LAST:event_btnRestarActionPerformed
+
+    private void btnMultiplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplicarActionPerformed
+        // TODO add your handling code here:
+        double nro1 = Double.parseDouble(txtNro1.getText());
+        double nro2 = Double.parseDouble(txtNro2.getText());
+
+        double multiplicar = nro1 * nro2;
+
+        JOptionPane.showMessageDialog(null, "La multiplicar de los numeros es :" + multiplicar);
+    }//GEN-LAST:event_btnMultiplicarActionPerformed
 
     /**
      * @param args the command line arguments
